@@ -10,7 +10,7 @@ class AdvancedShape():
         self.y = start_y
         self.speed = 1
         self.t = turtle.Turtle(shape="classic", visible=False)
-        self.t.shape("square")
+        self.t.shape("triangle")
         self.t.resizemode("user")
         self.t.shapesize(self.size, self.size, 5)
         self.current_tilt = start_angle

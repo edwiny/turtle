@@ -4,8 +4,8 @@ import time
 
 from shape import AdvancedShape
 
-SCREEN_WIDTH = 500
-SCREEN_HEIGHT = 500
+SCREEN_WIDTH = 1000
+SCREEN_HEIGHT = 800
 
 
 
@@ -18,8 +18,8 @@ def spawn_shape():
     global SCREEN_HEIGHT, SCREEN_HEIGHT
     global shapes
     shapes.append(AdvancedShape(sides=random.randint(3, 16), 
-                              size=random.randint(1, 10),
-                              color=random.choice(["red", "yellow", "green", "blue"]),
+                              size=random.randint(300, 400),
+                              color=random.choice(["red", "orange", "yellow", "green", "blue", "pink", "purple"]),
                               start_x=random.randint(-SCREEN_WIDTH, SCREEN_WIDTH),
                               start_y=SCREEN_HEIGHT,
                               start_angle=random.randint(-10, 10)
@@ -50,7 +50,7 @@ while not done:
 
         next_spawn_time = current_time + 100000000
 
-        if len(shapes) < 100:
+        if len(shapes) < 200:
             spawn_shape()
         
 
